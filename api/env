@@ -1,0 +1,8 @@
+DATABASE_URL=mongodb+srv://mardawn24:Brendon2024@cluster0.tycylw9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PUBLIC_KEY=uqgebaxo
+PRIVATE_KEY=52d3c64b-13ca-4021-853a-b6efd4ff486d
+KEY=335436159196651
+SECRET=4FcJZo3YC8ahO3kLqCGt31SraBY
+CLOUDINARY_URL=cloudinary://335436159196651:4FcJZo3YC8ahO3kLqCGt31SraBY@dwammuxa2
+
+PORT=5001

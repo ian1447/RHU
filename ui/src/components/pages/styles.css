@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400&display=swap');
+
+/* General Reset for Full Width */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure Body and HTML occupy full viewport width */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Full Width Section Styling */
+section, footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.hero-content {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.hero-section h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 3rem; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; /* Normal */
+  font-size: 1.25rem; /* Adjust as needed */
+  margin-bottom: 30px;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About Section Styling */
+.about-section {
+  background: #ffffff;
+  padding: 60px 0;
+}
+
+.about-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 2rem; /* Adjust as needed */
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; /* Normal */
+  font-size: 1.25rem; /* Adjust as needed */
+}
+
+.about-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* News and Events Section Styling */
+.news-events-section {
+  background: #f1f1f1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.news-events-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold */
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.news-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.news-item:hover {
+	background-color: #f7f7f7;
+	transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.news-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.news-item img {
+	transition: transform 0.3s ease;
+	border-radius: 8px;
+}
+
+.news-item:hover img {
+	transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* News and Events Section Styling */
+.appointment-section {
+  background: #f1f1f1;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.appointment-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.appointment-item {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.appointment-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.appointment-item p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer Section Styling */
+.footer-section {
+  background: #007bff;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.calendar-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%; /* Adjust to ensure it doesn't exceed modal width */
+  height: 100%; /* Use full height available within the modal */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.calendar-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Allows the calendar to grow within the available space */
+  overflow: auto; /* Adds scrollbars if the content overflows */
+}
+
+.custom-calendar {
+  width: 100%;
+  max-width: 100%;
+  font-size: 1rem;
+  height: 100%; /* Make sure it occupies the full height of its container */
+  overflow: hidden; /* Prevents internal overflow */
+}
+
+.stepper-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendar-card {
+    padding: 15px;
+  }
+  
+  .custom-calendar {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-card {
+    padding: 10px;
+  }
+  
+  .custom-calendar {
+    font-size: 0.8rem;
+  }
+}
+
+
+.stepper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  padding: 10px 0;
+}
+
+.step-number {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.step-label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+}
+
+.step-line {
+  height: 2px;
+  background-color: #666;
+  flex-grow: 1;
+  margin: 30px 5px;
+}
+
+.step.active .step-number {
+  background-color: #007bff;
+  color: white;
+}
+
+.step.active .step-label {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.stepper-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+
+/* for public news styles */
+/* Overall page container */
+.news-page-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	padding: 20px;
+	background-color: #f9f9f9;
+}
+
+/* Left side: News content styling */
+.news-content-card {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.news-title {
+	font-weight: bold;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.news-article {
+	color: #666;
+	margin-bottom: 15px;
+}
+
+.news-date {
+	color: #999;
+	font-size: 0.85rem;
+}
+
+/* Right side: Comments section */
+.comments-section {
+	/* background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* User avatar */
+.user-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+	float: left;
+}
+
+/* User info (name and date) */
+.user-info {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+	font-weight: bold;
+	color: #333;
+  margin: 0;
+}
+
+.comment-date {
+	color: #999;
+	font-size: 0.85rem;
+}
+
+.comments-list {
+	margin-top: 20px;
+}
+
+.comment-card {
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+}
+
+.comment-header {
+	display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-text {
+	font-size: 1rem;
+	color: #333;
+}
+
+.star-rating {
+	color: #f5a623;
+	font-size: 0.85rem;
+}
+
+.replies {
+	margin-left: 20px;
+  padding-top: 10px;
+}
+
+.reply-text {
+	font-size: 0.9em;
+	color: #555;
+	background-color: #f7f7f7;
+	padding: 10px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+}
+
+.reply-input {
+	width: 100%;
+	padding: 8px;
+	margin-top: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.reply-btn {
+	margin-top: 5px;
+	padding: 5px 10px;
+	background-color: #28a745;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.reply-btn:hover {
+	background-color: #218838;
+}
+
+/* Add Comment section */
+.add-comment {
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.comment-input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.add-comment-btn {
+	align-self: flex-start;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.add-comment-btn:hover {
+	background-color: #0056b3;
+}
